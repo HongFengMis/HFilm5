@@ -30,6 +30,13 @@ Rooms.Nav.io = function(){
         // Dom.Video.pause(0);
     });
 
+    socket.on("GuestMode", function(){
+        Dom.GuestMode = 1;
+    });
+    socket.on("GuestModeEnd", function(){
+        Dom.GuestMode = 0;
+    });
+
     // socket.on("video", function(){
     //     Action.Video();
     //     Dom.Video.play(0);
